@@ -1,1 +1,114 @@
-empty here 
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>GOLD CALCULATOR</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+         }
+
+         html,body{
+            display: grid;
+            height: 100%;
+            place-items: center;
+            text-align: center;
+            background: #f2f2f2;
+         }
+
+         .container{
+            background: #fff;
+            padding: 20px 40px;
+            width: 420px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+         }
+
+      .container header{
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 33px;
+         }
+
+
+         .container form{
+            margin: 20px 5px 10px 5px;
+         }
+
+         .container form .field{
+            height: 45px;
+            width: 100%;
+            display: flex;
+         }
+         
+         form .field input{
+            margin: 5px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightgrey;
+            padding-left: 15px;
+            outline: none;
+            border-radius: 5px;
+            font-size: 17px;
+            transition: all 0.3s;
+         }
+
+         .k{
+            padding: 10px;
+            display: grid;
+         }
+   </style>
+
+   </head>
+   <body>
+      <div class="container">
+         <header>HOPE U GET LUCKY ☘️</header>
+         <div class="field">
+               <form action="#" onkeyup="calculate()">
+               <div class="k">
+                  <input  type="number" id="21k" placeholder="21k">
+                  <input  type="number" id="am1" placeholder="amount">
+               </div>
+               <div class="k">
+                  <input  type="number"id="24k" placeholder="24k">
+                  <input  type="number"id="am2" placeholder="amount">
+               </div>  
+               <input  type="number"  id="buy" placeholder="Bought at...">
+               <input  type="number"  id="bck" placeholder="Cashback">
+            </form>
+            <div class="decision">
+               
+               <input  type="number"  id="result" placeholder="Sell at">
+               <input  type="number"  id="net" placeholder="NET">   
+            </div>
+            </div>
+      </div>
+      <script>
+       function calculate(){
+            let x = parseFloat(document.getElementById('21k').value);
+            let am1 = parseFloat(document.getElementById('am1').value);
+            let am2 = parseFloat(document.getElementById('am2').value);
+            let buy = parseFloat(document.getElementById('buy').value);
+            let bck = parseFloat(document.getElementById('bck').value);
+
+
+            y = x*24/21;
+            document.getElementById('24k').value = (x*24/21);
+
+            x += bck;
+            y += bck;
+
+            x = am1 * x;
+            y = am2 * y;
+            
+            document.getElementById('result').value = (x+y);
+            parseFloat(document.getElementById('net').value = (x+y - buy));
+         } 
+      </script>
+   </body>
+</html>
