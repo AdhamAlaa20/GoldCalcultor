@@ -78,7 +78,8 @@
                   <input  type="number"id="24k" placeholder="24k">
                   <input  type="number"id="am2" placeholder="amount">
                </div>  
-               <input  type="number"  id="buy" placeholder="Bought at...">        
+               <input  type="number"  id="buy" placeholder="Bought at...">
+               <input  type="number"  id="bck" placeholder="Cashback">
             </form>
             <div class="decision">
                
@@ -93,12 +94,14 @@
             let am1 = parseFloat(document.getElementById('am1').value);
             let am2 = parseFloat(document.getElementById('am2').value);
             let buy = parseFloat(document.getElementById('buy').value);
+            let bck = parseFloat(document.getElementById('bck').value);
+
 
             y = x*24/21;
             document.getElementById('24k').value = (x*24/21);
 
-            x += 20;
-            y += 20;
+            x += bck;
+            y += bck;
 
             x = am1 * x;
             y = am2 * y;
